@@ -1,5 +1,6 @@
 package com.bridgelabz.deckofcard;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class DeckCard {
@@ -43,4 +44,15 @@ public class DeckCard {
 		}
 	}
 
+	private static void distributeCards() {
+		System.out.println("Displaying the selected card");
+		Random r = new Random();
+		int suit = r.nextInt(4);
+		int rank = r.nextInt(13);
+		if (deck[suit][rank] == null) {
+			distributeCards();
+		} else {
+			System.out.println(deck[suit][rank]);
+		}
+	}
 }
