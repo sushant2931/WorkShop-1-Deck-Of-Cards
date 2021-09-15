@@ -20,8 +20,17 @@ public class DeckCard {
 		System.out.println("Enter the number of players");
 		int maxPlayers = s.nextInt();
 		s.close();
-		System.out.println("max players are : " + maxPlayers);
+		System.out.println("Max players are : " + maxPlayers);
+
+		playerSequence(maxPlayers);
 		showAllCards();
+
+	}
+
+	private static void playerSequence(int maxPlayers) {
+		for (int i = 0; i < maxPlayers; i++) {
+			System.out.println("Player" + i);
+		}
 	}
 
 	private static void showAllCards() {
@@ -30,7 +39,8 @@ public class DeckCard {
 			for (int j = 0; j < 13; j++) {
 				System.out.println(" " + deck[i][j]);
 			}
-				System.out.println();
+			System.out.println();
 		}
 	}
+
 }
